@@ -81,8 +81,6 @@ class UTF7StyleCharsetDecoder extends CharsetDecoder {
 			} else {
 				if (b == shift) {
 					base64mode = true;
-					if (justUnshifted && strict)
-						return malformed(in);
 					justShifted = true;
 					continue;
 				}
