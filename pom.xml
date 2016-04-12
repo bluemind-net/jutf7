@@ -3,7 +3,7 @@
 	<groupId>com.beetstra.jutf7</groupId>
 	<artifactId>jutf7</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<name>jutf7</name>
 	<url>http://jutf7.sourceforge.net/</url>
 	<description>
