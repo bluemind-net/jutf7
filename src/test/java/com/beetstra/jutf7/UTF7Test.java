@@ -148,6 +148,7 @@ public class UTF7Test extends CharsetTest {
 	}
 
 	public void testEncodeAddUnshiftOnUnshift() throws Exception {
+		System.out.println(encode("\u00ED+-"));
 		assertEquals("+AO0AKw--", encode("\u00ED+-"));
 	}
 

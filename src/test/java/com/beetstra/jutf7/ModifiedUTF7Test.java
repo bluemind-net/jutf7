@@ -117,8 +117,11 @@ public class ModifiedUTF7Test extends CharsetTest {
 	}
 
 	public void testDecodeUnshiftShiftSequence() throws Exception {
-		assertMalformed("&ImIDkQ-&ImIDkQ-", "\u2262\u0391");
-		assertEquals("\u2262\u0391a\u2262\u0391", decode("&ImIDkQ-a&ImIDkQ-"));
+		assertEquals("é&", decode("&AOk-&-"));
+	}
+	
+	public void testEncodeUnshiftShiftSequence() throws Exception {
+		assertEquals("&AOk-&-", encode("é&"));
 	}
 
 	public void testDecodeIllegalBase64char() throws Exception {
