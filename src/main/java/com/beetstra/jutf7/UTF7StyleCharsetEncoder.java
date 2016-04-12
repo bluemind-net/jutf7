@@ -132,6 +132,10 @@ class UTF7StyleCharsetEncoder extends CharsetEncoder {
 			if (cs.canEncodeDirectly(ch)) {
 				unshift(out, ch);
 				out.put((byte) ch);
+			} else if (base64mode && ch == shift) {
+				unshift(out, ch);
+				out.put(shift);
+				out.put(unshift);
 			} else if (!base64mode && ch == shift) {
 				out.put(shift);
 				out.put(unshift);
